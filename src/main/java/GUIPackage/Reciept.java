@@ -42,7 +42,6 @@ public class Reciept extends javax.swing.JFrame {
         Continue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Checkout");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUIPackage/Free_Sample_By_Wix (1).jpeg"))); // NOI18N
 
@@ -162,7 +161,7 @@ public class Reciept extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
