@@ -94,16 +94,15 @@ public class MenuFormWomen extends javax.swing.JFrame {
             new String [] {
                 "Shirt", "Color", "Fabric", "Pieces", "Price"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(TableStocks);
+        if (TableStocks.getColumnModel().getColumnCount() > 0) {
+            TableStocks.getColumnModel().getColumn(0).setHeaderValue("Shirt");
+            TableStocks.getColumnModel().getColumn(1).setHeaderValue("Color");
+            TableStocks.getColumnModel().getColumn(2).setHeaderValue("Fabric");
+            TableStocks.getColumnModel().getColumn(3).setHeaderValue("Pieces");
+            TableStocks.getColumnModel().getColumn(4).setHeaderValue("Price");
+        }
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +170,7 @@ public class MenuFormWomen extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(237, 237, 237)
                     .addComponent(jLabel1)
-                    .addContainerGap(514, Short.MAX_VALUE)))
+                    .addContainerGap(516, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
